@@ -14,6 +14,17 @@ public class Main {
 //        System.out.println(isValid("["));
 //        int[] nums = new int[]{1, 1, 2};
 //        System.out.println(removeDuplicates(nums));
+
+//        int[] given = new int[]{3,2,2,3};
+//        System.out.println(removeElement(given, 3));
+//        System.out.println(Arrays.toString(given));
+
+//        System.out.println(strStr("hello", "ll"));
+//        System.out.println(strStr("hello", ""));
+//        System.out.println(strStr("aaaaa", "a"));
+
+//        int[] nums = new int[]{1,3,5,6};
+//        System.out.println(searchInsert(nums, 2));
     }
 
     public static int romanToInt(String s) {
@@ -123,5 +134,69 @@ public class Main {
             }
         }
         return i + 1;
+    }
+
+    public static int removeElement(int[] nums, int val) {
+        for (int i=0; i<nums.length; i++) {
+            if (nums[i] == val) {
+                for (int j=i; j<nums.length; j++) {
+                    if (nums[j] != val) {
+                        int temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
+                        break;
+                    }
+                }
+            }
+        }
+        int count = 0;
+        for (int i=0; i<nums.length; i++) {
+            if (nums[i] != val) {
+                count++;
+                continue;
+            }
+            break;
+        }
+        return count;
+    }
+
+    public static int strStr(String haystack, String needle) {
+        if (needle.length() <= 0) return 0;
+        else if (needle.length() > haystack.length()) return -1;
+        else if (haystack.equals(needle)) return 0;
+        boolean isPart = false;
+        int index = -1;
+        for (int i=0; i<haystack.length(); i++) {
+            if (haystack.charAt(i) == needle.charAt(0)) {
+                if (haystack.length() - i >= needle.length()) {
+                    for (int j=0; j<needle.length(); j++) {
+                        if (haystack.charAt(i+j) == needle.charAt(j)) {
+                            if (j == needle.length()-1) {
+                                isPart = true;
+                                index = i;
+                                break;
+                            }
+                            continue;
+                        }
+                        break;
+                    }
+                }
+            }
+            if (isPart) {
+                break;
+            }
+        }
+        return index;
+    }
+
+    public static int searchInsert(int[] nums, int target) {
+        int shouldBe = 0;
+        for (int i=0; i<nums.length; i++) {
+            if (nums[i] == target) return i;
+            if (nums[i] < target) {
+                shouldBe = i+1;
+            }
+        }
+        return shouldBe;
     }
 }
