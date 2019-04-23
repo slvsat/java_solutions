@@ -4,7 +4,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        // System.out.println(romanToInt("MCMXCIV"));
+        testing();
+    }
+
+    public static void testing() {
+//        System.out.println(romanToInt("MCMXCIV"));
+
 //        System.out.println(isValid(""));
 //        System.out.println(isValid("()[]{}"));
 //        System.out.println(isValid("(]"));
@@ -12,6 +17,7 @@ public class Main {
 //        System.out.println(isValid("{[]}"));
 //        System.out.println(isValid("]"));
 //        System.out.println(isValid("["));
+
 //        int[] nums = new int[]{1, 1, 2};
 //        System.out.println(removeDuplicates(nums));
 
