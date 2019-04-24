@@ -31,6 +31,12 @@ public class Main {
 
 //        int[] nums = new int[]{1,3,5,6};
 //        System.out.println(searchInsert(nums, 2));
+
+//        char[] s = new char[]{'H','a','n','n','a','h'};
+//        reverseString(s);
+//        System.out.println(s);
+
+//        System.out.println(countAndSay(6));
     }
 
     public static int romanToInt(String s) {
@@ -204,5 +210,34 @@ public class Main {
             }
         }
         return shouldBe;
+    }
+
+    public static void reverseString(char[] s) {
+        for(int i=0; i<s.length/2; i++) {
+            char temp = s[i];
+            s[i] = s[s.length-1-i];
+            s[s.length-1-i] = temp;
+        }
+    }
+
+    public static String countAndSay(int n) {
+        if (n < 1 || n > 30) return "";
+        if (n == 1) return "1";
+
+        String s = countAndSay(n - 1);
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            count++;
+
+            if (i + 1 >= s.length() || s.charAt(i) != s.charAt(i + 1)) {
+                sb.append(count);
+                sb.append(s.charAt(i));
+                count = 0;
+            }
+        }
+
+        return sb.toString();
     }
 }
