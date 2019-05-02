@@ -410,4 +410,77 @@ public class DoneProblems {
         if (a.val != b.val) return false;
         return isEqual(a.left, b.right) && isEqual(a.right, b.left);
     }
+
+    // 104
+    public int maxDepth(DoneProblems.TreeNode root) {
+        if (root == null) return 0;
+        return Math.max(maxDepth(root.left)+1, maxDepth(root.right)+1);
+    }
+
+    // 102
+    public List<List<Integer>> levelOrder(DoneProblems.TreeNode root) {
+        if (root == null) return new ArrayList<>();
+        Queue<DoneProblems.TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> result = new ArrayList<>();
+        queue.add(root);
+        int count = 1;
+        List<Integer> temp = new ArrayList<>();
+        int secondsCount = 0;
+        while(queue.size() != 0) {
+            DoneProblems.TreeNode s = queue.poll();
+            if (s.left != null) {
+                queue.add(s.left);
+                secondsCount++;
+            }
+            if (s.right != null) {
+                queue.add(s.right);
+                secondsCount++;
+            }
+            if (count > 0) {
+                temp.add(s.val);
+                count--;
+            }
+            if (count == 0) {
+                result.add(temp);
+                temp = new ArrayList<>();
+                count = secondsCount;
+                secondsCount = 0;
+            }
+        }
+        return result;
+    }
+
+    // 107
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        if (root == null) return new ArrayList<>();
+        Queue<DoneProblems.TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> result = new ArrayList<>();
+        queue.add(root);
+        int count = 1;
+        List<Integer> temp = new ArrayList<>();
+        int secondsCount = 0;
+        while(queue.size() != 0) {
+            DoneProblems.TreeNode s = queue.poll();
+            if (s.left != null) {
+                queue.add(s.left);
+                secondsCount++;
+            }
+            if (s.right != null) {
+                queue.add(s.right);
+                secondsCount++;
+            }
+            if (count > 0) {
+                temp.add(s.val);
+                count--;
+            }
+            if (count == 0) {
+                result.add(temp);
+                temp = new ArrayList<>();
+                count = secondsCount;
+                secondsCount = 0;
+            }
+        }
+        Collections.reverse(result);
+        return result;
+    }
 }
