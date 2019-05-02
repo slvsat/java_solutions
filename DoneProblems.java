@@ -397,4 +397,17 @@ public class DoneProblems {
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
+
+    // 101
+    public static boolean isSymmetric(DoneProblems.TreeNode root) {
+        if (root == null) return true;
+        return isEqual(root.left, root.right);
+    }
+
+    public static boolean isEqual(DoneProblems.TreeNode a, DoneProblems.TreeNode b) {
+        if (a == null && b == null) return true;
+        if (a == null || b == null) return false;
+        if (a.val != b.val) return false;
+        return isEqual(a.left, b.right) && isEqual(a.right, b.left);
+    }
 }
