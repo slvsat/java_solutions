@@ -391,7 +391,7 @@ public class DoneProblems {
 //        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 //    }
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -482,5 +482,20 @@ public class DoneProblems {
         }
         Collections.reverse(result);
         return result;
+    }
+
+    // 108
+    public static DoneProblems.TreeNode sortedArrayToBST(int[] nums) {
+        if (nums.length < 1) return null;
+        return binaryConstructor(nums, 0, nums.length - 1);
+    }
+
+    public static DoneProblems.TreeNode binaryConstructor(int[] nums, int low, int high) {
+        if (low > high) return null;
+        int k = (low + high) / 2;
+        DoneProblems.TreeNode node = new DoneProblems.TreeNode(nums[k]);
+        node.left = binaryConstructor(nums, low, k - 1);
+        node.right = binaryConstructor(nums, k + 1, high);
+        return node;
     }
 }
