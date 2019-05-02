@@ -363,4 +363,38 @@ public class DoneProblems {
         }
         return p.next;
     }
+
+
+    // 88
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i=m-1, j=n-1, k=m+n-1;
+        while (i>-1 && j>-1) nums1[k--]= (nums1[i]>nums2[j]) ? nums1[i--] : nums2[j--];
+        while (j>-1)         nums1[k--]=nums2[j--];
+    }
+
+    // 100
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p != null && q != null) {
+            if (p.val != q.val) return false;
+        }
+        else if (p != null && q == null) return false;
+        else if (p == null && q != null) return false;
+        else if (p == null && q == null) return true;
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+
+    // Less code -->
+//    public boolean isSameTree(TreeNode p, TreeNode q) {
+//        if (p == null && q == null) return true;
+//        if (p == null || q == null) return false;
+//        if (p.val != q.val) return false;
+//        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+//    }
+
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
 }
