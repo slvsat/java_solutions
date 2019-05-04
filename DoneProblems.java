@@ -155,7 +155,6 @@ public class DoneProblems {
         if (needle.length() <= 0) return 0;
         else if (needle.length() > haystack.length()) return -1;
         else if (haystack.equals(needle)) return 0;
-        boolean isPart = false;
         int index = -1;
         for (int i=0; i<haystack.length(); i++) {
             if (haystack.charAt(i) == needle.charAt(0)) {
@@ -163,18 +162,13 @@ public class DoneProblems {
                     for (int j=0; j<needle.length(); j++) {
                         if (haystack.charAt(i+j) == needle.charAt(j)) {
                             if (j == needle.length()-1) {
-                                isPart = true;
-                                index = i;
-                                break;
+                                return i;
                             }
                             continue;
                         }
                         break;
                     }
                 }
-            }
-            if (isPart) {
-                break;
             }
         }
         return index;
