@@ -1,9 +1,10 @@
 public class ValidPolindrome_125 {
 
     public boolean isPalindrome(String s) {
+        if (s.length() == 0) return true;
         int i = 0;
         int j = s.length() - 1;
-        while(i != j) {
+        while(i < j) {
             char a = s.charAt(i);
             char b = s.charAt(j);
             if (a < 48 || a > 57 && a < 65 || a > 90 && a < 97 || a > 122) i++;
@@ -22,5 +23,4 @@ public class ValidPolindrome_125 {
         }
         return true;
     }
-
 }
