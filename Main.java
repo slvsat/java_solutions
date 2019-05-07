@@ -7,8 +7,7 @@ public class Main {
         testing();
     }
 
-    public static void testing() {
-
+    private static void testing() {
 
     }
 
