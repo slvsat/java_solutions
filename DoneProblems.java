@@ -101,12 +101,6 @@ public class DoneProblems {
         return head.next;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
-
 //    int[] nums = new int[]{1, 1, 2};
 //    System.out.println(removeDuplicates(nums));
     public int removeDuplicates(int[] nums) {
