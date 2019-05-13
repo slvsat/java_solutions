@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class TwoSum2_167 {
 
-
     // Runtime: 2 ms
     public int[] twoSum(int[] numbers, int target) {
         Map<Integer, Integer> resMap = new HashMap<>();
