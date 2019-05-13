@@ -1,3 +1,5 @@
+package DoneProblems;
+
 import java.util.*;
 
 public class DoneProblems {

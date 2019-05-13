@@ -1,3 +1,5 @@
+package DoneProblems;
+
 public class MinDepth_111 {
 
     public int minDepth(TreeNode root) {

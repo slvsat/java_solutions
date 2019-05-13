@@ -1,3 +1,5 @@
+package DoneProblems;
+
 public class HasPathSum_112 {
 
     public boolean hasPathSum(TreeNode root, int sum) {

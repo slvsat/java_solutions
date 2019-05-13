@@ -1,3 +1,5 @@
+package DoneProblems;
+
 import java.util.*;
 
 public class TreeNodeProblems {
@@ -13,7 +15,7 @@ public class TreeNodeProblems {
     }
 
     // Less code -->
-//    public boolean isSameTree(TreeNode p, TreeNode q) {
+//    public boolean isSameTree(DoneProblems.TreeNode p, DoneProblems.TreeNode q) {
 //        if (p == null && q == null) return true;
 //        if (p == null || q == null) return false;
 //        if (p.val != q.val) return false;

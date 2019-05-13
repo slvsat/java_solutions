@@ -1,3 +1,5 @@
+package DoneProblems;
+
 import java.util.Arrays;
 
 public class SortedSquares_977 {

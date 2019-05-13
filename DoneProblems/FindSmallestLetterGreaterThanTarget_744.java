@@ -1,3 +1,5 @@
+package DoneProblems;
+
 public class FindSmallestLetterGreaterThanTarget_744 {
 
     public char nextGreatestLetter(char[] letters, char target) {

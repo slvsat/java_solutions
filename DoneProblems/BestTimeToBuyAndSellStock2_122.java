@@ -1,3 +1,5 @@
+package DoneProblems;
+
 public class BestTimeToBuyAndSellStock2_122 {
 
     public int maxProfit(int[] prices) {

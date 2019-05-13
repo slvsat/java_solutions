@@ -1,3 +1,5 @@
+package DoneProblems;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,5 +16,4 @@ public class TwoSum_1 {
         }
         throw new IllegalArgumentException("No two sum solution");
     }
-
 }
