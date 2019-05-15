@@ -1,4 +1,4 @@
-package DoneProblems;
+package leetcode;
 
 import java.util.*;
 

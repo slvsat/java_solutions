@@ -1,4 +1,4 @@
-package DoneProblems;
+package leetcode;
 
 public class HasPathSum_112 {
 
