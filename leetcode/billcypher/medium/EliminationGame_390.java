@@ -1,4 +1,4 @@
-package leetcode.medium;
+package billcypher.medium;
 
 public class EliminationGame_390 {
     public int lastRemaining(int n) {

@@ -1,6 +1,6 @@
-package leetcode.easy;
+package billcypher.easy;
 
-import leetcode.structures.TreeNode;
+import structures.TreeNode;
 
 public class LowestCommonAncestorOfABST_235 {
 

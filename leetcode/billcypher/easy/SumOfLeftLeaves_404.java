@@ -1,6 +1,6 @@
-package leetcode.easy;
+package billcypher.easy;
 
-import leetcode.structures.TreeNode;
+import structures.TreeNode;
 import sun.reflect.generics.tree.Tree;
 
 public class SumOfLeftLeaves_404 {

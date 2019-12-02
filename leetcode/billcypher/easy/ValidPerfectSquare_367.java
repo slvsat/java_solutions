@@ -1,4 +1,4 @@
-package leetcode.easy;
+package billcypher.easy;
 
 public class ValidPerfectSquare_367 {
     public boolean isPerfectSquare(int num) {

@@ -1,4 +1,4 @@
-package leetcode.structures;
+package structures;
 
 public class Node {
     public int val;

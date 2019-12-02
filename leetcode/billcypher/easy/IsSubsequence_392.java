@@ -1,4 +1,4 @@
-package leetcode.easy;
+package billcypher.easy;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 

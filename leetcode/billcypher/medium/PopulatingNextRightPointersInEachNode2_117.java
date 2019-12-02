@@ -1,6 +1,6 @@
-package leetcode.medium;
+package billcypher.medium;
 
-import leetcode.structures.Node;
+import structures.Node;
 
 public class PopulatingNextRightPointersInEachNode2_117 {
 

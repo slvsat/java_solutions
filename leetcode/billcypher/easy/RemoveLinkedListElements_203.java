@@ -1,6 +1,6 @@
-package leetcode.easy;
+package billcypher.easy;
 
-import leetcode.structures.ListNode;
+import structures.ListNode;
 
 public class RemoveLinkedListElements_203 {
 

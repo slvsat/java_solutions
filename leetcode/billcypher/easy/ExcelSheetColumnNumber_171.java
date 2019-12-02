@@ -1,4 +1,4 @@
-package leetcode.easy;
+package billcypher.easy;
 
 public class ExcelSheetColumnNumber_171 {
 

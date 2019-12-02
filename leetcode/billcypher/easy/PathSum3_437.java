@@ -1,4 +1,6 @@
-package leetcode.easy;
+package billcypher.easy;
+
+import structures.TreeNode;
 
 public class PathSum3_437 {
     // Double dfs - not efficient but works

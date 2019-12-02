@@ -1,6 +1,6 @@
-package leetcode.easy;
+package billcypher.easy;
 
-import leetcode.structures.TreeNode;
+import structures.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;

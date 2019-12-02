@@ -1,4 +1,4 @@
-package leetcode.easy;
+package billcypher.easy;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package leetcode.medium;
+package billcypher.medium;
 
 import java.util.Arrays;
 

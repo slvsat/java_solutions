@@ -1,4 +1,4 @@
-package leetcode.easy;
+package billcypher.easy;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package leetcode.structures;
+package structures;
 
 public class ListNode {
         public int val;
