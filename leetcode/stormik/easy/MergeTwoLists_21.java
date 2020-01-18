@@ -1,4 +1,4 @@
-package leetcode.stormik;
+package leetcode.stormik.easy;
 
 import structures.ListNode;
 
