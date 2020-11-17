@@ -2,7 +2,7 @@ package codeforces;
 
 import java.util.*;
 
-public class A {
+public class CubesSorting {
     public static void main(String[] args)  {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -14,25 +14,33 @@ public class A {
                 arr[j] = in.nextInt();
             }
             int k = 0;
-            while (form != k) {
-                for (int a = 1; a < d-1; a++) {
-                    if (arr[a-1] < arr[a]) {
+            boolean res = false;
+            while (k < form) {
+                for (int a = 0; a < d-1; a++) {
+                    if (arr[a] > arr[a+1]) {
                         int temp = arr[a];
-                        arr[a] = arr[a-1];
-                        arr[a-1] = temp;
+                        arr[a] = arr[a+1];
+                        arr[a+1] = temp;
                         k++;
                     }
-                    if (form == k) {
-                        for (int b = 0; b < d; b++) {
-                            if (arr[b] > arr[b+1]) {
-                                System.out.println("NO");
-                            }
-                        }
-                        System.out.println("YES");
+                    if (k > form) break;
+                }
+                for (int e = 0; e < d-1; e++) {
+                    if (arr[e] > arr[e+1]) {
+                        break;
+                    }
+                    if (e+1 == d-1) {
+                        res = true;
+                        k = form+1;
+                        break;
                     }
                 }
             }
-            System.out.println("NO");
+            if (!res) {
+                System.out.println("NO");
+            } else {
+                System.out.println("YES");
+            }
         }
         in.close();
     }
