@@ -1,4 +1,4 @@
-package leetcode.stormik.arrays;
+package leetcode.stormik.arrays101;
 
 import java.util.HashMap;
 import java.util.Map;

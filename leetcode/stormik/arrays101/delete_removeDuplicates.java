@@ -1,6 +1,4 @@
-package leetcode.stormik.arrays;
-
-import java.util.Arrays;
+package leetcode.stormik.arrays101;
 
 public class delete_removeDuplicates {
 

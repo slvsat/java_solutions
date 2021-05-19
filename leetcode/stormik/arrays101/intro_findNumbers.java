@@ -1,4 +1,4 @@
-package leetcode.stormik.arrays;
+package leetcode.stormik.arrays101;
 
 public class intro_findNumbers {
 
