@@ -9,36 +9,29 @@ import java.util.Queue;
 public class spr_isSymmetric {
 
     public boolean isSymmetric(TreeNode root) {
-        List<List<Integer>> toCompare = new ArrayList<>();
-        Queue<TreeNode> qu = new LinkedList<>();
-        qu.add(root);
-        int point = 1;
-        while(!qu.isEmpty()) {
-            List<Integer> tempRes = new ArrayList<>();
-            int tmpPoint = 0;
-            for (int i = 0; i < point; i++) {
-                TreeNode retr = qu.poll();
-                if (retr == null) {
-                    tempRes.add(-101);
-                    continue;
-                }
-                qu.add(retr.left);
-                qu.add(retr.right);
-                tmpPoint += 2;
-                tempRes.add(retr.val);
-            }
-            point = tmpPoint;
-            if (tempRes.size() > 0) toCompare.add(tempRes);
-        }
+        return isMirror(root.left, root.right);
+    }
 
-        for (List<Integer> ls : toCompare) {
-            int l = 0;
-            int r = ls.size() - 1;
-            while (l < r) {
-                if (!ls.get(l).equals(ls.get(r))) return false;
-                l++;
-                r--;
-            }
+    public boolean isMirror(TreeNode left, TreeNode right) {
+        if (left == null && right == null) return true;
+        if (left == null || right == null) return false;
+        return (left.val == right.val) && isMirror(left.left, right.right) && isMirror(left.right, right.left);
+    }
+
+    public boolean isSymmetricIterative(TreeNode root) {
+        Queue<TreeNode> it = new LinkedList<>();
+        it.add(root);
+        it.add(root);
+        while(!it.isEmpty()) {
+            TreeNode t1 = it.poll();
+            TreeNode t2 = it.poll();
+            if (t1 == null && t2 == null) continue;
+            if (t1 == null || t2 == null) return false;
+            if (t1.val != t2.val) return false;
+            it.add(t1.left);
+            it.add(t2.right);
+            it.add(t1.right);
+            it.add(t2.left);
         }
         return true;
     }
