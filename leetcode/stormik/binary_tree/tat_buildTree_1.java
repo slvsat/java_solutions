@@ -5,8 +5,10 @@ import structures.TreeNode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class tat_buildTree {
 
+public class tat_buildTree_1 {
+
+    // Inorder & Postorder traversal results
     Map<Integer, Integer> inordermap = new HashMap<>();
     int position = 0;
 
