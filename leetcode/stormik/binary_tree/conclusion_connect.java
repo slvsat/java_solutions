@@ -32,17 +32,18 @@ public class conclusion_connect {
     }
 
     public Node recursionConnect(Node root) {
-        return helperRec(root, null);
+        return helperRec(root);
     }
 
-    public Node helperRec(Node one, Node two) {
-        if (one == null) return null;
-        if (two == null) {
-            one.next = two;
-            return one;
-        }
+    public Node helperRec(Node one) {
+        if (one == null || one.left == null) return one;
+        one.left.next = one.right;
 
-        one.next = two;
+        if (one.next != null) {
+            one.right.next = one.next.left;
+        }
+        helperRec(one.left);
+        helperRec(one.right);
         return one;
     }
 
