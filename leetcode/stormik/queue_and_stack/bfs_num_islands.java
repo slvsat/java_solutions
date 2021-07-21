@@ -4,7 +4,7 @@ import com.sun.tools.javac.util.Pair;
 
 import java.util.*;
 
-public class num_islands {
+public class bfs_num_islands {
 
     public int numIslands(char[][] grid) {
         int n = grid.length;
